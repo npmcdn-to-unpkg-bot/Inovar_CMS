@@ -1,50 +1,48 @@
 {{ __SELF__.settings.text_top_form|raw}}
 
-<form id="simpleContactForm">
+<form id="simpleContactForm contact-form" action="php/contact-form.php" method="POST">
 
     <div id="simple_contact_flash_message"></div>
 
-
-    <div class="form-group">
-        <label for="name">{{__SELF__.properties.nameLabel}}</label>
-        <input type="text" id="name" name="name" class="form-control" required >
-    </div>
-
-    <div class="form-group">
-        <label for="email">{{__SELF__.properties.emailLabel}}</label>
-        <input type="email" id="email" name="email" class="form-control" required >
-    </div>
-
-    {% if(__SELF__.properties.phoneEnabled) %}
-        <div class="form-group">
-            <label for="phone">{{__SELF__.properties.phoneLabel}}</label>
-            <input type="text" id="phone" name="phone" class="form-control"  >
+    <div class="row">
+        <div class="col-md-12 mb-30">
+            <label for="name">Your name *</label>
+            <input type="text" id="name" name="name" value="" class="form-control"  required />
         </div>
-    {% endif %}
-
-    <div class="form-group">
-        <label for="subject">{{__SELF__.properties.subjectLabel}}</label>
-        <input type="text" id="subject" name="subject" class="form-control"  >
     </div>
 
-    <div class="form-group">
-        <label for="message">{{__SELF__.properties.messageLabel}}</label>
-        <textarea id="message" name="message" class="form-control"></textarea>
+    <div class="row">
+        <div class="col-md-12 mb-30">
+            <label for="email">Your email address *</label>
+            <input type="email" id="email" value=""  maxlength="100"  name="email" class="form-control"  required />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 mb-40">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" class="form-control" maxlength="5000" rows="3"></textarea>
+        </div>
     </div>
 
     <!-- Injecting reCaptcha if enabled -->
     {% if(__SELF__.settings.recaptcha_enabled) %}
-        <div class="form-group">
-            <label for="message"></label>
-            <div class="g-recaptcha" data-sitekey="{{__SELF__.settings.recaptcha_site_key}}"></div>
-        </div>
+    <div class="form-group">
+        <label for="message"></label>
+        <div class="g-recaptcha" data-sitekey="{{__SELF__.settings.recaptcha_site_key}}"></div>
+    </div>
     {% endif %}
     <!-- End reCaptcha -->
-
-    <button id="simpleContactSubmitButton"
-            data-request="{{ __SELF__ }}::onFormSubmit"
-            type="submit" class="btn btn-default">
-        {{__SELF__.properties.buttonText}}
-    </button>
+    <div class="row">
+        <div class="col-md-12 ">
+            <button id="simpleContactSubmitButton"
+                    data-request="{{ __SELF__ }}::onFormSubmit"
+                    data-loading-text="Loading..."
+                    type="submit" class="button medium gray">
+                SEND MESSAGE
+            </button>
+        </div>
+    </div>
 
 </form>
+

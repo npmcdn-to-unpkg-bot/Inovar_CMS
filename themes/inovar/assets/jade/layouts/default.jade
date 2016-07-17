@@ -90,7 +90,7 @@ html(class="no-js", lang="pt-br", itemscope itemtype="http://schema.org/Creative
                 +partial('layout/_partial_footer')
 
 
-        +yield('scripts')
+
 
         // jQuery
         script(type='text/javascript', src="{{ 'assets/js/dev/components/jquery-1.11.2.min.js'|theme }}")
@@ -102,6 +102,7 @@ html(class="no-js", lang="pt-br", itemscope itemtype="http://schema.org/Creative
         script(type='text/javascript', src="{{ 'assets/js/dev/components/jquery.countTo.js'|theme }}")
         script(type='text/javascript', src="{{ 'assets/js/dev/components/jquery.appear.js'|theme }}")
         script(type='text/javascript', src="{{ 'assets/js/dev/components/owl.carousel.min.js'|theme }}")
+        script(type='text/javascript', src="http://maps.googleapis.com/maps/api/js")
         script(src="{{ 'assets/js/dev/components/main.js'|theme }}")
         script(type='text/javascript', src="{{ 'assets/rs-plugin/js/jquery.themepunch.tools.min.js'|theme }}")
         script(type='text/javascript', src="{{ 'assets/rs-plugin/js/jquery.themepunch.revolution-parallax.min.js'|theme }}")
@@ -225,9 +226,8 @@ html(class="no-js", lang="pt-br", itemscope itemtype="http://schema.org/Creative
             });	//ready
 
 
-
-        //!='{% framework extras %}'
-        //!='{% scripts %}'
-        //script(src="https://www.google.com/recaptcha/api.js")
+        +yield('scripts')
+        !='{% framework extras %}'
+        !='{% scripts %}'
 
 

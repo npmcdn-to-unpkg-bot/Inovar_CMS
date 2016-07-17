@@ -7,6 +7,9 @@ include ./../layouts/mixin.jade
 +endsection()
 
 +section('scripts')
+script.
+    var menu = $('#main-menu nav ul'), LIs = menu.find('li'), Bs = LIs.find('a');
+    LIs.eq(0).removeClass('current');menu.find('[data-link="faq"]').addClass('current');
 +endsection()
 
 

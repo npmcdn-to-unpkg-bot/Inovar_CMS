@@ -85,10 +85,6 @@ description = "default"
 {% partial "layout/_partial_footer" %}
       </div>
     </div>
-
-{% placeholder scripts %}
-
-
     <!-- jQuery-->
     <script type="text/javascript" src="{{ 'assets/js/dev/components/jquery-1.11.2.min.js'|theme }}"></script>
     <script src="{{ 'assets/js/dev/components/bootstrap.min.js'|theme }}"></script>
@@ -99,6 +95,7 @@ description = "default"
     <script type="text/javascript" src="{{ 'assets/js/dev/components/jquery.countTo.js'|theme }}"></script>
     <script type="text/javascript" src="{{ 'assets/js/dev/components/jquery.appear.js'|theme }}"></script>
     <script type="text/javascript" src="{{ 'assets/js/dev/components/owl.carousel.min.js'|theme }}"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js"></script>
     <script src="{{ 'assets/js/dev/components/main.js'|theme }}"></script>
     <script type="text/javascript" src="{{ 'assets/rs-plugin/js/jquery.themepunch.tools.min.js'|theme }}"></script>
     <script type="text/javascript" src="{{ 'assets/rs-plugin/js/jquery.themepunch.revolution-parallax.min.js'|theme }}"></script>
@@ -222,11 +219,10 @@ description = "default"
       });	//ready
       
       
-      
     </script>
-    <!--!='{% framework extras %}'-->
-    <!--!='{% scripts %}'-->
-    <!--script(src="https://www.google.com/recaptcha/api.js")-->
-    
+
+{% placeholder scripts %}
+
+{% framework extras %}{% scripts %}
   </body>
 </html>

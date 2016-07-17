@@ -210,6 +210,7 @@ gulp.task('watch', function() {
  | All Jade task for deploy
  |--------------------------------------------------------------------------
  */
+//,'!'+jadeDir+'/content/**/*.jade'
 gulp.task('jade', function() {
     return gulp.src(jadeDir+'/**/*.jade')
         .pipe(cache('linting'))

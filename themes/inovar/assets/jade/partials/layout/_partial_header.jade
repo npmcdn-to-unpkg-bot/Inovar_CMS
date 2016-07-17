@@ -1,15 +1,20 @@
-- var voce_1_link = "{{ 'home'|page }}/#"
+- var voce_1_link = "{{ 'home'|page }}/#intro"
 - var voce_1_testo = "HOME"
 
-- var voce_2_link = "{{ 'home'|page }}/#"
-- var voce_2_testo = "VOCE2"
+- var voce_2_link = "{{ 'home'|page }}/#about"
+- var voce_2_testo = "ABOUT"
 
-- var voce_3_link = "{{ 'home'|page }}/#"
-- var voce_3_testo = "VOCE3"
+- var voce_3_link = "{{ 'home'|page }}/#service"
+- var voce_3_testo = "SERVICE"
 
-- var voce_4_link = "{{ 'home'|page }}/#"
-- var voce_4_testo = "VOCE4"
+- var voce_4_link = "{{ 'home'|page }}/#projects"
+- var voce_4_testo = "PROJECTS"
 
+- var voce_5_link = "{{ 'home'|page }}/#contact"
+- var voce_5_testo = "CONTACT"
+
+- var voce_6_link = "{{ 'faq'|page }}"
+- var voce_6_testo = "FAQs"
 
 header#nav.header.header-1
     .header-wrapper
@@ -35,17 +40,23 @@ header#nav.header.header-1
                         nav.collapse.collapsing.navbar-collapse.right-1024
                             ul.nav.navbar-nav
                                 li.parent.current
-                                    a(href='#{voce_1_link}')
+                                    a(href='#{voce_1_link}', title="")
                                         .main-menu-title #{voce_1_testo}
                                 li.parent
-                                    a(href='#{voce_2_link}')
+                                    a(href='#{voce_2_link}', title="")
                                         .main-menu-title #{voce_2_testo}
                                 li.parent
-                                    a(href='#{voce_3_link}')
+                                    a(href='#{voce_3_link}', title="")
                                         .main-menu-title #{voce_3_testo}
                                 li.parent
-                                    a(href='#{voce_4_link}')
+                                    a(href='#{voce_4_link}', title="")
                                         .main-menu-title #{voce_4_testo}
+                                li.parent
+                                    a(href='#{voce_5_link}', title="")
+                                        .main-menu-title #{voce_5_testo}
+                                li.parent(data-link="faq")
+                                    a(href='#{voce_6_link}', title="")
+                                        .main-menu-title #{voce_6_testo}
 
 
 

@@ -1,0 +1,29 @@
+- var scritta1 = "WELCOM TO"
+- var scritta2 = "HASWELL"
+- var scritta3 = "Sed ut perspiciatis unde omnis iste nation acus lorem <br /> antium que"
+
+- var pulsante1 = "BUY NOW"
+- var pulsante1_link = "http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel"
+- var pulsante1_title = "BUY NOW"
+
+- var pulsante2 = "READ MORE"
+- var pulsante2_link = "http://themeforest.net/user/abcgomel/portfolio?ref=abcgomel"
+- var pulsante2_title = "READ MORE"
+
+
+- var img_bg = "/themes/inovar/assets/images/revo-slider/slide_1_3.jpg"
+- var img_dummy = "/themes/inovar/assets/images/revo-slider/dummy.png"
+- var img_thumb = "/themes/inovar/assets/images/revo-slider/rs-fullscr-thumb3.jpg"
+
+li(data-transition='zoomout', data-slotamount='1', data-masterspeed='1500', data-thumb="#{img_thumb}", data-saveperformance='on', data-title='WELCOM')
+    img(src="#{img_dummy}", alt='citybg', data-lazyload="#{img_bg}", data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')/
+    .tp-caption.rs-parallaxlevel-4.zoomout(data-x='left', data-y='center', data-speed='1300', data-start='200', data-easing='Power3.easeInOut', style='z-index: 0;')
+        .slider-bg-white-cap
+    .rs-parallaxlevel-4.opacity-scroll2
+        .tp-caption.dark-light-60.center-0-478.sfb.tp-resizeme(data-x='645', data-y='218', data-speed='500', data-start='850', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;') #{scritta1}
+        .tp-caption.dark-black-60.center-0-478.sfb.tp-resizeme(data-x='645', data-y='295', data-speed='500', data-start='1050', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;') #{scritta2}
+        .tp-caption.center-0-478.hide-0-736.sfb.tp-resizeme(data-x='650', data-y='395', data-speed='900', data-start='1200', data-easing='Power3.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;')
+            | #{scritta3}
+        .tp-caption.center-0-478.sfb(data-x='650', data-y='465', data-speed='900', data-start='1350', data-easing='Power3.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;')
+            a.button.medium.gray.tp-button(href='#{pulsante1_link}', title="#{pulsante1_title}") #{pulsante1}
+            a.button.medium.thin.hover-dark.tp-button.hide-479-736.ml-20(href='#{pulsante2_link}', title="#{pulsante2_title}") #{pulsante2}

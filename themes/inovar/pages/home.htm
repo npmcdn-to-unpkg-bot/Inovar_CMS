@@ -1,0 +1,43 @@
+title = "Homepage"
+url = "/"
+layout = "default"
+description = "Página inicial do site"
+
+
+==
+
+
+{% put styles %}
+
+{% endput %}
+
+
+
+{% put scripts %}
+
+<!--script.function initialize(){var e={center:new google.maps.LatLng(-19.8409246,-43.952953),zoom:16,mapTypeId:google.maps.MapTypeId.ROADMAP,scrollwheel:!1},o=new google.maps.Map(document.getElementById("googleMap"),e),a=new google.maps.Marker({position:new google.maps.LatLng(-19.8409246,-43.952953),animation:google.maps.Animation.BOUNCE,icon:"/themes/atemporale/assets/images/home/aeball.png"});a.setMap(o);var n=new google.maps.InfoWindow({content:"Atemporale Design"});n.open(o,a);var t=[{stylers:[{hue:"#803588"},{saturation:-80},{lightness:50}]}];o.setOptions({styles:t})}$(document).ready(function(){$("a").on("click",function(e){if(""!==this.hash){e.preventDefault();var o=this.hash;$("html, body").animate({scrollTop:$(o).offset().top},800,function(){window.location.hash=o})}})}),google.maps.event.addDomListener(window,"load",initialize);
+-->
+{% endput %}
+
+
+
+{% put pages %}
+
+{% partial "home/_partial_intro" %}
+{% partial "home/_partial_about" %}
+<div style="border-top:1px solid #eee" class="clear"></div>
+{% partial "home/_partial_services" %}
+{% partial "home/_partial_projects" %}
+{% partial "home/_partial_clients" %}
+{% partial "home/_partial_process" %}
+{% partial "home/_partial_team" %}
+{% partial "home/_partial_data" %}
+<div style="border-top:1px solid #eee" class="clear"></div>
+{% partial "home/_partial_calltoaction_1" %}
+<div style="border-top:1px solid #eee" class="clear"></div>
+{% partial "home/_partial_calltoaction_2" %}
+{% partial "home/_partial_video" %}
+<!--+partial('home/_partial_blog')-->
+<!--+partial('home/_partial_subscribe')-->
+{% endput %}
+

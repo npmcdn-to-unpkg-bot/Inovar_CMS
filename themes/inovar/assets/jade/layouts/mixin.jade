@@ -1,0 +1,300 @@
+- var newline = "\r\n"
+- var loopIterator = '$iterator'
+
+
+
+mixin if3(val1,val2,val3)
+    | {% if #{val1} #{val2} '#{val3}' %}
+    =newline + newline
+mixin elseif3(val1,val2,val3)
+    | {% elseif #{val1} #{val2} '#{val3}' %}
+    =newline + newline
+
+
+//- twig if, elseif, esle, endif
+  Example:  +if('kenny.sick')+elseif('kenny.dead')+else()+endif()
+  Compiled: {% if kenny.sick %}{% elseif kenny.dead %}{% else %}{% endif %}
+mixin if(desc)
+    | {% if #{desc} %}
+    =newline + newline
+mixin elseif(desc)
+    | {% elseif #{desc} %}
+    =newline + newline
+mixin else()
+    | {% else %}
+    =newline + newline
+mixin endif()
+    | {% endif %}
+    =newline + newline
+
+
+
+
+
+
+//- twig info layout
+  Example:  +infolayout('custom description')
+  Compiled: description = custom description
+mixin infofile(desc)
+    | description = "#{desc}"
+    =newline + newline
+
+
+//- twig end info file
+  Example:  +endinfofile()
+  Compiled: ==
+mixin endinfofile()
+    =newline
+    | ==
+    =newline
+
+
+//- twig info page
+  Example:  +infopage('Title page','/','default',Custom description'})
+  Compiled: title = "Demonstration"
+            url = "/"
+            layout = "default"
+            description = ""
+            ==
+mixin infopage(title,url,layout,description)
+    | title = "#{title}"
+    =newline
+    | url = "#{url}"
+    =newline
+    | layout = "#{layout}"
+    =newline
+    | description = "#{description}"
+    =newline + newline
+
+//- twig info page
+  Example:  +inportfileinfo('title')
+  Compiled: {{ this.page.title }}
+mixin inportfileinfo(info)
+    | {{ this.page.#{info} }}
+
+//- twig partial
+  Example:  +partial('home/base')
+  Compiled: {% partial "home/base" %}
+mixin partial(info)
+    =newline
+    | {% partial "#{info}" %}
+
+
+
+//- twig yield
+  Example:  +yield('pages')
+  Compiled: {% placeholder pages %}
+mixin yield(info)
+    =newline
+    =newline
+    | {% placeholder #{info} %}
+    =newline
+    =newline
+
+//- twig section
+  Example:  +section('styles')
+  Compiled: {% put content %}
+mixin section(info)
+    =newline
+    =newline
+    | {% put #{info} %}
+    =newline
+//- twig endsection
+  Example:  +endsection()
+  Compiled: {% endput %}
+mixin endsection()
+    =newline
+    | {% endput %}
+    =newline
+    =newline
+
+//- twig content
+  Example:  +content('pages/home.htm')
+  Compiled: {% content "pages/home.htm" %}
+mixin content(info)
+    =newline
+    =newline
+    | {% content "#{info}" %}
+    =newline
+    =newline
+
+//- twig component
+  Example:  +component('blogPosts')
+  Compiled: {% component "blogPosts" %}
+mixin component(info)
+    =newline
+    =newline
+    | {% component "#{info}" %}
+    =newline
+    =newline
+
+
+//- twig component
+  Example:  +editable('welcome.htm')
+  Compiled: {% component 'editable' file="welcome.htm" %}
+mixin editable(info)
+    =newline
+    =newline
+    | {% component 'editable' file="#{info}" %}
+    =newline
+    =newline
+
+
+//- twig info component
+  Example:  +infocomponent('blogPosts')
+  Compiled: [blogPosts]
+mixin infocomponent(info)
+    =newline
+    =newline
+    | [#{info}]
+    =newline
+
+
+//- twig generic option
+  Example:  +optiongenericcomponent('slug','"{{ :slug }}"')
+  Compiled:   slug = "{{ :slug }}"
+mixin optiongenericcomponent(val1,val2)
+    | #{val1} = #{val2}
+    =newline
+
+
+//- twig component option
+  Example:  +optionblogcomponent('page','','10','No posts found','published_at desc','blog/category','blog/post')
+  Compiled:   pageNumber = "{{ :page }}"
+              categoryFilter =
+              postsPerPage = 10
+              noPostsMessage = "No posts found"
+              sortOrder = "published_at desc"
+              categoryPage = "blog/category"
+              postPage = "blog/post"
+mixin optionblogcomponent(val1,val2,val3,val4,val5,val6,val7)
+    | pageNumber = "{{ :#{val1} }}"
+    =newline
+    | categoryFilter = "{{ #{val2} }}"
+    =newline
+    | postsPerPage = #{val3}
+    =newline
+    | noPostsMessage = "#{val4}"
+    =newline
+    | sortOrder = "#{val5}"
+    =newline
+    | categoryPage = "#{val6}"
+    =newline
+    | postPage = "#{val7}"
+    =newline
+    =newline
+
+//- twig component option
+  Example:  +optionpostcomponent('slug','blog/ecodesign')
+  Compiled:   slug = "{{ :slug }}"
+              categoryPage  = "blog/index"
+mixin optionpostcomponent(val1,val2)
+    | slug = "{{ :#{val1} }}"
+    =newline
+    | categoryPage = "#{val2}"
+    =newline
+    =newline
+
+//- twig component option
+  Example:  +optionlistcategorycomponent('slug','blog/ecodesign','0'
+  Compiled:   slug = "{{ :slug }}"
+              displayEmpty = 0
+              categoryPage = "blog/ecodesign"
+mixin optionlistcategorycomponent(val1,val2,val3)
+    | slug = "{{ :#{val1} }}"
+    =newline
+    | categoryPage = "#{val2}"
+    =newline
+    | displayEmpty = #{val3}
+    =newline
+    =newline
+
+//- twig component option
+  Example:  +optionsharecomponent('1','1','1','1','1','1','1','1','1','1','1','flat_web_icon_set_color')
+  Compiled:   facebook = 1
+              twitter = 1
+              google+ = 1
+              tumblr = 1
+              pinterest = 1
+              pocket = 1
+              reddit = 1
+              linkedin = 1
+              wordpress = 1
+              pinboard = 1
+              email = 1
+              theme = "flat_web_icon_set_color"
+mixin optionsharecomponent(val1,val2,val3,val4,val5,val6,val7,val8,val9,val10,val11,val12)
+    | facebook = #{val1}
+    =newline
+    | twitter = #{val2}
+    =newline
+    | google+ = #{val3}
+    =newline
+    | tumblr = #{val4}
+    =newline
+    | pinterest = #{val5}
+    =newline
+    | pocket = #{val6}
+    =newline
+    | reddit = #{val7}
+    =newline
+    | linkedin = #{val8}
+    =newline
+    | wordpress = #{val9}
+    =newline
+    | pinboard = #{val10}
+    =newline
+    | email = #{val11}
+    =newline
+    | theme = "#{val12}"
+    =newline
+    =newline
+
+//- twig component option
+  Example:  +optionlogincomponent('private/clientpanel','code')
+  Compiled:   redirect = "private/clientpanel"
+              paramCode  = "code"
+mixin optionlogincomponent(val1,val2)
+    | redirect = "#{val1}"
+    =newline
+    | paramCode = "#{val2}"
+    =newline
+    =newline
+
+
+//- twig component option
+  Example:  +optionsessioncomponent('user','private/login')
+  Compiled:   security = "user"
+              redirect = "private/login"
+mixin optionsessioncomponent(val1,val2)
+    | security = "#{val1}"
+    =newline
+    | redirect = "#{val2}"
+    =newline
+    =newline
+
+//- twig component form
+  Example:  +optionformcomponent('Nome completo','Email','Telefone','Objeto','Mensagem','Eviar','1')
+  Compiled:   nameTitle = "Nome completo"
+              emailTitle = "Email"
+              phoneTitle = "Telefone"
+              subjectTitle = "Objeto"
+              messageTitle = "Mensagem"
+              buttonText = "Eviar"
+              displayPhone = 1
+mixin optionformcomponent(val1,val2,val3,val4,val5,val6,val7)
+    | nameTitle = "#{val1}"
+    =newline
+    | emailTitle = "#{val2}"
+    =newline
+    | phoneTitle = "#{val3}"
+    =newline
+    | subjectTitle = "#{val4}"
+    =newline
+    | messageTitle = "#{val5}"
+    =newline
+    | buttonText = "#{val6}"
+    =newline
+    | displayPhone = #{val7}
+    =newline
+    =newline

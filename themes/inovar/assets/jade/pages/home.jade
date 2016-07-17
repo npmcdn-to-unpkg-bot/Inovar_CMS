@@ -1,0 +1,32 @@
+include ./../layouts/mixin.jade
++infopage('Homepage','/','default','Página inicial do site')
+
++endinfofile()
+
++section('styles')
++endsection()
+
++section('scripts')
+//script.
+    function initialize(){var e={center:new google.maps.LatLng(-19.8409246,-43.952953),zoom:16,mapTypeId:google.maps.MapTypeId.ROADMAP,scrollwheel:!1},o=new google.maps.Map(document.getElementById("googleMap"),e),a=new google.maps.Marker({position:new google.maps.LatLng(-19.8409246,-43.952953),animation:google.maps.Animation.BOUNCE,icon:"/themes/atemporale/assets/images/home/aeball.png"});a.setMap(o);var n=new google.maps.InfoWindow({content:"Atemporale Design"});n.open(o,a);var t=[{stylers:[{hue:"#803588"},{saturation:-80},{lightness:50}]}];o.setOptions({styles:t})}$(document).ready(function(){$("a").on("click",function(e){if(""!==this.hash){e.preventDefault();var o=this.hash;$("html, body").animate({scrollTop:$(o).offset().top},800,function(){window.location.hash=o})}})}),google.maps.event.addDomListener(window,"load",initialize);
++endsection()
+
+
++section('pages')
++partial('home/_partial_intro')
++partial('home/_partial_about')
+.clear(style="border-top:1px solid #eee")
++partial('home/_partial_services')
++partial('home/_partial_projects')
++partial('home/_partial_clients')
++partial('home/_partial_process')
++partial('home/_partial_team')
++partial('home/_partial_data')
+.clear(style="border-top:1px solid #eee")
++partial('home/_partial_calltoaction_1')
+.clear(style="border-top:1px solid #eee")
++partial('home/_partial_calltoaction_2')
++partial('home/_partial_video')
+//+partial('home/_partial_blog')
+//+partial('home/_partial_subscribe')
++endsection()

@@ -1,0 +1,19 @@
+{
+  "name": "atemporaleNEXT",
+  "description": "Base frontend dependencies",
+  "main": "",
+  "authors": [
+    "Alessandro Traversi"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "node_modules",
+    "vendor"
+  ],
+  "dependencies": {
+    "atemporaleNEXTbower": "~1.0.3"
+  }
+}

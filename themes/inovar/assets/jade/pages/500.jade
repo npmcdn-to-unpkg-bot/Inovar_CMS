@@ -1,0 +1,48 @@
+include ./../layouts/mixin.jade
++infopage('500','/500','default','Página inicial do site')
+
++endinfofile()
+
++section('styles')
++endsection()
+
++section('scripts')
++endsection()
+
+
++section('pages')
+.container.p-140-cont
+    .row.mb-40
+        .col-md-12.text-center
+            #clock
+        .col-md-6.text-center.img-container-404
+            img(alt='img', src="{{'assets/images/content/404.png'|theme}}")/
+        .col-md-6.m-top-10
+            h3 OOPS! THE PAGE YOU WERE LOOKING FOR, COULDN&apos;T BE FOUND
+            p
+                | We&apos;re sorry, but the page you were looking for doesn&apos;t exist. Here are some useful links
+            .row.m-top-20
+                .col-md-6
+                    ul.icon-list
+                        li
+                            i.fa.fa-angle-right
+                            a.a-invert(href='index.html') Home
+                        li
+                            i.fa.fa-angle-right
+                            a.a-invert(href='about-us.html') About Us
+                        li
+                            i.fa.fa-angle-right
+                            a.a-invert(href='faq.html') FAQs
+                .col-md-6
+                    ul.icon-list
+                        li
+                            i.fa.fa-angle-right
+                            a.a-invert(href='portfolio-2-col.html') Portfolio
+                        li
+                            i.fa.fa-angle-right
+                            a.a-invert(href='blog.html') Blog
+                        li
+                            i.fa.fa-angle-right
+                            a.a-invert(href='contact.html') Contact
+
++endsection()

@@ -1,0 +1,105 @@
+- var endereço = "790 FOLSOM AVE, SAN FRANCISCO"
+- var mail_link = "INFO@HASWELL.COM"
+- var mail_title = "Invia una mail"
+- var telefone = "1-800-312-212, 1-800-311-101"
+
+- var fb_link = "http://"
+- var fb_title = "facebbok"
+- var gp_link = "http://"
+- var gp_title = "google plus"
+- var li_link = "http://"
+- var li_title = "linkedin"
+- var in_link = "http://"
+- var in_title = "instagram"
+
+- var credits_link = "http://atemporale.it"
+- var credits_title = "ATEMPORALE DESIGN - ESTRATÉGIAS CRIATIVAS DE COMUNICAÇÃO E DESIGN"
+- var credits_text = "Todos os direitos reservados - Créditos: Atemporale Design"
+
+.page-section.p-110-cont
+    .container
+        .row
+            .col-md-4.col-sm-6
+                .cis-cont
+                    .cis-icon
+                        .icon.icon-basic-map
+                    .cis-text
+                        h3
+                            span.bold ENDEREÇO
+                        p #{endereço}
+            .col-md-4.col-sm-6
+                .cis-cont
+                    .cis-icon
+                        .icon.icon-basic-mail
+                    .cis-text
+                        h3
+                            span.bold EMAIL
+                        p
+                            a(href="mailto:'#{mail_link}'", title="mail_title") #{mail_link}
+            .col-md-4.col-sm-6
+                .cis-cont
+                    .cis-icon
+                        .icon.icon-basic-smartphone
+                    .cis-text
+                        h3
+                            span.bold TELEFONE
+                        p #{telefone}
+// GOOGLE MAP & CONTACT FORM
+.page-section.gray-bg
+    .container-fluid
+        .row
+            .col-md-6
+                .row
+                    #google-map(data-address='555 California Street Building, California Street, San Francisco, CA')
+            .col-md-6
+                .contact-form-cont
+                    // TITLE
+                    .mb-40
+                        h2.section-title
+                            | ENTRE EM CONTATO
+                            span.bold CONOSCO
+                    // CONTACT FORM
+                    div
+                        form#contact-form(action='php/contact-form.php', method='POST')
+                            .row
+                                .col-md-12.mb-30
+                                    // <label>Your name *</label>
+                                    input#name.form-control(type='text', value='', data-msg-required='Please enter your name.', maxlength='100', name='name', placeholder='NAME', required='')
+                            .row
+                                .col-md-12.mb-30
+                                    // <label>Your email address *</label>
+                                    input#email.form-control(type='email', value='', data-msg-required='Please enter your email address.', data-msg-email='Please enter a valid email address.', maxlength='100', name='email', placeholder='EMAIL', required='')
+                            .row
+                                .col-md-12.mb-40
+                                    // <label>Message *</label>
+                                    textarea#message.form-control(maxlength='5000', data-msg-required='Please enter your message.', rows='3', name='message', placeholder='MESSAGE', required='')
+                            .row
+                                .col-md-12
+                                    input.button.medium.gray(type='submit', value='SEND MESSAGE', data-loading-text='Loading...')
+
+                        #contactSuccess.alert.alert-success.hidden
+                            strong Success!
+                            |  Your message has been sent to us.
+                        #contactError.alert.alert-danger.hidden
+                            strong Error!
+                            |  There was an error sending your message.
+// FOOTER 1
+footer#footer1.page-section.text-center.pt-100-b-80-cont
+    .container
+        // Social Links
+        .footer-soc-a
+            a(href="#{fb_link}", title="#{fb_title}", target='_blank')
+                i.fa.fa-facebook
+            a(href="#{gp_link}", title="#{gp_title}", target='_blank')
+                i.fa.fa-google-plus
+            a(href="#{li_link}", title="#{li_title}", target='_blank')
+                i.fa.fa-linkedin
+            a(href="#{in_link}", title="#{in_title}", target='_blank')
+                i.fa.fa-instagram
+        // Copyright
+        .footer-copy
+            a(href='#{credits_link}', title="#{credits_title}", target='_blank') #{credits_text}
+// BACK TO TOP
+p#back-top
+    a(href='#top', title='Back to Top')
+        span.icon.icon-arrows-up

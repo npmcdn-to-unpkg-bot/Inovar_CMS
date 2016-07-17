@@ -1,0 +1,18 @@
+- var scritta1 = "Begin"
+- var scritta2 = "Anywhere"
+- var scritta3 = "Your passion will guide you"
+
+- var img_bg = "/themes/inovar/assets/images/revo-slider/slide_1_1.jpg"
+- var img_dummy = "/themes/inovar/assets/images/revo-slider/dummy.png"
+- var img_thumb = "/themes/inovar/assets/images/revo-slider/rs-fullscr-thumb1.jpg"
+
+li(data-transition='zoomout', data-slotamount='1', data-masterspeed='1500', data-thumb="#{img_thumb}", data-saveperformance='on', data-title='BEGIN')
+    img(src="#{img_dummy}", alt='slidebg1', data-lazyload="#{img_bg}", data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')/
+    .tp-caption.rs-parallaxlevel-4.zoomout(data-x='left', data-y='center', data-speed='1300', data-start='200', data-easing='Power3.easeInOut', style='z-index: 0;')
+        .slider-bg-white-cap
+    .rs-parallaxlevel-4.opacity-scroll2
+        .tp-caption.dark-light-100.tp-left.sfb.tp-resizeme(data-x='640', data-y='205', data-speed='500', data-start='850', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;') #{scritta1}
+        .tp-caption.dark-black-100.tp-left.sfb.tp-resizeme(data-x='650', data-y='295', data-speed='500', data-start='1050', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;') #{scritta2}
+        .tp-caption.slider-1-cap-line.tp-left.hide-0-736.sfb.tp-resizeme(data-x='650', data-y='420', data-speed='1000', data-start='1250', data-easing='Power3.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;')
+            .cap-line
+        .tp-caption.dark-light-32.fs16-when-0-736.tp-left.sfb.tp-resizeme(data-x='650', data-y='450', data-speed='900', data-start='1500', data-easing='Power3.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;') #{scritta3}

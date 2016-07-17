@@ -1,0 +1,62 @@
+include ./../../layouts/mixin.jade
+.page-section
+    .container-fluid
+        .row
+            .col-md-6.wow.fadeInLeft.equal-height
+                .fes2-main-text-cont
+                    .title-fs-45
+                        +content('home_service/_content_title1.htm')
+
+                    .line-3-70
+                    .fes2-text-cont
+                        +content('home_service/_content_subtitle1.htm')
+
+            .col-md-6
+                .row
+                    .fes2-img.equal-height
+.page-section
+    .container-fluid
+        .row
+            .col-md-6.left-50.wow.fadeInRight.equal-height
+                .fes2-main-text-cont
+                    .title-fs-45
+                        +content('home_service/_content_title2.htm')
+
+                    .line-3-100
+                    .fes2-text-cont
+                        +content('home_service/_content_subtitle2.htm')
+
+            .col-md-6.right-50
+                .row
+                    .fes3-img.equal-height
+
+.clear(style="border-top:1px solid #eee")
+.page-section.fes4-cont
+    .container
+        .row
+            .col-xs-12.col-sm-4.col-md-4
+                .fes4-box.wow.fadeIn
+                    h2.section-title
+                        +content('home_service/_content_title3.htm')
+
+            .col-xs-12.col-sm-4.col-md-4
+                .fes4-box.wow.fadeIn(data-wow-delay='200ms')
+                    +content('home_service/_content_item1.htm')
+
+            .col-xs-12.col-sm-4.col-md-4
+                .fes4-box.wow.fadeIn(data-wow-delay='400ms')
+                    +content('home_service/_content_item2.htm')
+
+        .row
+            .col-xs-12.col-sm-4.col-md-4
+                .fes4-box.wow.fadeIn(data-wow-delay='600ms')
+                    +content('home_service/_content_item3.htm')
+
+            .col-xs-12.col-sm-4.col-md-4
+                .fes4-box.wow.fadeIn(data-wow-delay='800ms')
+                    +content('home_service/_content_item4.htm')
+
+            .col-xs-12.col-sm-4.col-md-4
+                .fes4-box.wow.fadeIn(data-wow-delay='1000ms')
+                    +content('home_service/_content_item5.htm')
+

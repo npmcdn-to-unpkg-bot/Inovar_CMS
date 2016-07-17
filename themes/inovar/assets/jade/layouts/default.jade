@@ -1,0 +1,233 @@
+include ./mixin.jade
+
++infofile('default')
+
++endinfofile()
+
+doctype html
+html(class="no-js", lang="pt-br", itemscope itemtype="http://schema.org/CreativeWork", xmlns:og="http://opengraphprotocol.org/schema/", xmlns:fb="http://www.facebook.com/2008/fbml", xmlns:website="http://ogp.me/ns/website", prefix="fb: http://ogp.me/ns/ profile: http://ogp.me/ns/profile#")
+    head
+
+        //Meta nameTemplate
+        title {{ this.theme.site_name }} - {{ this.page.title }}
+        meta(name="title", content!="{% if this.page.meta_title %}{{ this.page.meta_title }}{% else %}{{ this.theme.meta_title }}{% endif %}")
+        meta(name="description", content!="{% if this.page.meta_description %}{{ this.page.meta_description }}{% else %}{{ this.theme.meta_description }}{% endif %}")/
+        meta(name="keywords", content!="{{ this.theme.meta_keywords }}")/
+
+        meta(charset="utf-8")/
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")/
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")/
+        meta(name="google", content="notranslate")/
+        meta(name="author", content="Atemporale Design, Atemporale NEXT")/
+        meta(name="application-name", content="Atemporale Design - Estratégias criativas para um negócio inspirador")/
+
+        //Meta name og
+        meta(property="og:title", content="Atemporale Design - Estratégias Criativas de Comunicação e Design")/
+        meta(property="og:description", content="Estúdio de Design - localizado em Belo Horizonte/MG - que realiza: ecodesign,  marcas, websites, mkt digital, aplicando o pensamento sistêmico para transformar o seu negócio em um empreendimento inspirador!")/
+        meta(property="og:type", content="website")/
+        meta(property="og:url", content="http://atemporale.it")/
+        meta(property="og:image", content="{{ 'assets/images/image-atemporale.jpg'|theme}}")/
+        meta(property="og:determiner", content="the")/
+        meta(property="og:locale", content="pt_BR")/
+        meta(property="fb:app_id", content="1172179922816213")/
+        meta(name="copyright", content="Atemporale Design")
+
+        //fb pixel
+
+        //Meta name verify
+        meta(name="google-site-verification", content="b9PEJCUxXJmQUN6VGgMYU5CRgXmdoq0l7MKnrlIIeJQ")/
+        meta(name="norton-safeweb-site-verification", content="ix6555vvpa7xbbh6rkh2yq1w36ewui43beh5uaquc0kgjrfowgswekck6dww4oo60oiotj5uv9t7mzo5mwjlyycjfk4i-e4ep3tudx3wsckgtu7yt3cch5vybjc8n3ux")/
+        meta(name="msvalidate.01", content="7230172E10043E45FA378C249668C28C")/
+
+        //Favicon.ico
+        link(rel="shortcut icon", href="{{ 'assets/images/favicon/favicon.png'|theme}}")
+        link(rel="apple-touch-icon", href="{{ 'assets/images/favicon/apple-touch-icon.png'|theme}}")
+        link(rel="apple-touch-icon", sizes="72x72", href="{{ 'assets/images/favicon/apple-touch-icon-72x72.png'|theme}}")
+        link(rel="apple-touch-icon", sizes="114x114", href="{{ 'assets/images/favicon/apple-touch-icon-114x114.png'|theme}}")
+
+        // CSS
+        // REVOSLIDER CSS SETTINGS
+        link(rel='stylesheet', type='text/css', href="{{ 'assets/rs-plugin/css/settings.min.css'|theme}}", media='screen')
+        // BOOTSTRAP
+        link(rel='stylesheet', href="{{ 'assets/css/bootstrap.min.css'|theme}}")
+        // GOOGLE FONT
+        link(href='http://fonts.googleapis.com/css?family=Lato:300,400,700%7COpen+Sans:400,300,700', rel='stylesheet', type='text/css')
+        // ICONS ELEGANT FONT & FONT AWESOME & LINEA ICONS
+        link(rel='stylesheet', href="{{ 'assets/css/icons-fonts.css'|theme}}")
+        // CSS THEME
+        link(rel='stylesheet', href="{{ 'assets/css/style.css'|theme}}")
+        // ANIMATE
+        link(rel='stylesheet', href="{{ 'assets/css/animate.min.css'|theme}}")
+
+        // IE Warning CSS
+        //[if lte IE 8]
+            <link rel="stylesheet" type="text/css" href="/themes/inovar/assets/css/ie-warning.css" ><![endif]
+        //[if lte IE 8]
+            <link rel="stylesheet" type="text/css" href="/themes/inovar/assets/css/ie8-fix.css" ><![endif]
+        //[if lte IE 8]
+            <script src="/themes/inovar/vendor/html5shiv/dist/html5shiv.min.js"></script><![endif]
+        //[if lte IE 8]
+            <script src="/themes/inovar/vendor/respond/dest/respond.min.js"></script><![endif]
+
+        // Modernizr
+        //<script src="/themes/inovar/vendor/modernizr/src/Modernizr.js"></script>
+
+
+        //Page CSS
+        +yield('styles')
+
+    body(itemtype="", itemscope)
+        //commenti blog
+
+        // LOADER
+        //#loader-overflow
+            #loader3 Please enable JS
+        #wrap.boxed
+            .grey-bg
+                +partial('layout/_partial_warning')
+                +partial('layout/_partial_header')
+                +yield('pages')
+                +partial('layout/_partial_footer')
+
+
+        +yield('scripts')
+
+        // jQuery
+        script(type='text/javascript', src="{{ 'assets/js/dev/components/jquery-1.11.2.min.js'|theme }}")
+        script(src="{{ 'assets/js/dev/components/bootstrap.min.js'|theme }}")
+        script(src="{{ 'assets/js/dev/components/jquery.magnific-popup.min.js'|theme }}")
+        script(type='text/javascript', src="{{ 'assets/js/dev/components/isotope.pkgd.min.js'|theme }}")
+        script(type='text/javascript', src="{{ 'assets/js/dev/components/imagesloaded.pkgd.min.js'|theme }}")
+        script(type='text/javascript', src="{{ 'assets/js/dev/components/masonry.pkgd.min.js'|theme }}")
+        script(type='text/javascript', src="{{ 'assets/js/dev/components/jquery.countTo.js'|theme }}")
+        script(type='text/javascript', src="{{ 'assets/js/dev/components/jquery.appear.js'|theme }}")
+        script(type='text/javascript', src="{{ 'assets/js/dev/components/owl.carousel.min.js'|theme }}")
+        script(src="{{ 'assets/js/dev/components/main.js'|theme }}")
+        script(type='text/javascript', src="{{ 'assets/rs-plugin/js/jquery.themepunch.tools.min.js'|theme }}")
+        script(type='text/javascript', src="{{ 'assets/rs-plugin/js/jquery.themepunch.revolution-parallax.min.js'|theme }}")
+        script(type='text/javascript').
+            jQuery(document).ready(function () {
+                if ((navigator.appVersion.indexOf("Win") != -1) && (ieDetect == false)) {
+                    jQuery('#rs-fullscr').revolution({
+                        dottedOverlay: "none",
+                        delay: 16000,
+                        startwidth: 1170,
+                        startheight: 700,
+                        hideThumbs: 200,
+                        thumbWidth: 100,
+                        thumbHeight: 50,
+                        thumbAmount: 5, /*fullScreenAlignForce: "off",*/
+                        navigationType: "none",
+                        navigationArrows: "solo",
+                        navigationStyle: "preview4",
+                        hideTimerBar: "on",
+                        touchenabled: "on",
+                        onHoverStop: "on",
+                        swipe_velocity: 0.7,
+                        swipe_min_touches: 1,
+                        swipe_max_touches: 1,
+                        drag_block_vertical: false,
+                        parallax: "scroll",
+                        parallaxBgFreeze: "on",
+                        parallaxLevels: [45, 40, 35, 50],
+                        parallaxDisableOnMobile: "on",
+                        keyboardNavigation: "off",
+                        navigationHAlign: "center",
+                        navigationVAlign: "bottom",
+                        navigationHOffset: 0,
+                        navigationVOffset: 20,
+                        soloArrowLeftHalign: "left",
+                        soloArrowLeftValign: "center",
+                        soloArrowLeftHOffset: 20,
+                        soloArrowLeftVOffset: 0,
+                        soloArrowRightHalign: "right",
+                        soloArrowRightValign: "center",
+                        soloArrowRightHOffset: 20,
+                        soloArrowRightVOffset: 0,
+                        shadow: 0,
+                        fullWidth: "off",
+                        fullScreen: "on",
+                        spinner: "spinner4",
+                        stopLoop: "off",
+                        stopAfterLoops: -1,
+                        stopAtSlide: -1,
+                        shuffle: "off",
+                        autoHeight: "off",
+                        forceFullWidth: "off",
+                        hideThumbsOnMobile: "off",
+                        hideNavDelayOnMobile: 1500,
+                        hideBulletsOnMobile: "off",
+                        hideArrowsOnMobile: "off",
+                        hideThumbsUnderResolution: 0,
+                        hideSliderAtLimit: 0,
+                        hideCaptionAtLimit: 0,
+                        hideAllCaptionAtLilmit: 0,
+                        startWithSlide: 0/*,fullScreenOffsetContainer: ""*/
+                    });
+                } else {
+                    jQuery('#rs-fullscr').revolution({
+                        dottedOverlay: "none",
+                        delay: 16000,
+                        startwidth: 1170,
+                        startheight: 700,
+                        hideThumbs: 200,
+                        thumbWidth: 100,
+                        thumbHeight: 50,
+                        thumbAmount: 5,
+                        navigationType: "none",
+                        navigationArrows: "solo",
+                        navigationStyle: "preview4",
+                        hideTimerBar: "on",
+                        touchenabled: "on",
+                        onHoverStop: "on",
+                        swipe_velocity: 0.7,
+                        swipe_min_touches: 1,
+                        swipe_max_touches: 1,
+                        drag_block_vertical: false,
+                        parallax: "mouse",
+                        parallaxBgFreeze: "on",
+                        parallaxLevels: [0],
+                        parallaxDisableOnMobile: "on",
+                        keyboardNavigation: "off",
+                        navigationHAlign: "center",
+                        navigationVAlign: "bottom",
+                        navigationHOffset: 0,
+                        navigationVOffset: 20,
+                        soloArrowLeftHalign: "left",
+                        soloArrowLeftValign: "center",
+                        soloArrowLeftHOffset: 20,
+                        soloArrowLeftVOffset: 0,
+                        soloArrowRightHalign: "right",
+                        soloArrowRightValign: "center",
+                        soloArrowRightHOffset: 20,
+                        soloArrowRightVOffset: 0,
+                        shadow: 0,
+                        fullWidth: "off",
+                        fullScreen: "on",
+                        spinner: "spinner4",
+                        stopLoop: "off",
+                        stopAfterLoops: -1,
+                        stopAtSlide: -1,
+                        shuffle: "off",
+                        autoHeight: "off",
+                        forceFullWidth: "off",
+                        hideThumbsOnMobile: "off",
+                        hideNavDelayOnMobile: 1500,
+                        hideBulletsOnMobile: "off",
+                        hideArrowsOnMobile: "off",
+                        hideThumbsUnderResolution: 0,
+                        hideSliderAtLimit: 0,
+                        hideCaptionAtLimit: 0,
+                        hideAllCaptionAtLilmit: 0,
+                        startWithSlide: 0
+                    });
+                }
+            });	//ready
+
+
+
+        //!='{% framework extras %}'
+        //!='{% scripts %}'
+        //script(src="https://www.google.com/recaptcha/api.js")
+
+

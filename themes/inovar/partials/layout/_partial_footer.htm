@@ -1,0 +1,101 @@
+
+<div class="page-section p-110-cont">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">
+        <div class="cis-cont">
+          <div class="cis-icon">
+            <div class="icon icon-basic-map"></div>
+          </div>
+          <div class="cis-text">
+            <h3><span class="bold">ENDEREÇO</span></h3>
+            <p>790 FOLSOM AVE, SAN FRANCISCO</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="cis-cont">
+          <div class="cis-icon">
+            <div class="icon icon-basic-mail"></div>
+          </div>
+          <div class="cis-text">
+            <h3><span class="bold">EMAIL</span></h3>
+            <p><a href="mailto:'INFO@HASWELL.COM'" title="mail_title">INFO@HASWELL.COM</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6">
+        <div class="cis-cont">
+          <div class="cis-icon">
+            <div class="icon icon-basic-smartphone"></div>
+          </div>
+          <div class="cis-text">
+            <h3><span class="bold">TELEFONE</span></h3>
+            <p>1-800-312-212, 1-800-311-101</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- GOOGLE MAP & CONTACT FORM-->
+<div class="page-section gray-bg">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div id="google-map" data-address="555 California Street Building, California Street, San Francisco, CA"></div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="contact-form-cont">
+          <!-- TITLE-->
+          <div class="mb-40">
+            <h2 class="section-title">ENTRE EM CONTATO<span class="bold">CONOSCO</span></h2>
+          </div>
+          <!-- CONTACT FORM-->
+          <div>
+            <form id="contact-form" action="php/contact-form.php" method="POST">
+              <div class="row">
+                <div class="col-md-12 mb-30">
+                  <!-- <label>Your name *</label>-->
+                  <input id="name" type="text" value="" data-msg-required="Please enter your name." maxlength="100" name="name" placeholder="NAME" required="" class="form-control"/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-30">
+                  <!-- <label>Your email address *</label>-->
+                  <input id="email" type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" name="email" placeholder="EMAIL" required="" class="form-control"/>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 mb-40">
+                  <!-- <label>Message *</label>-->
+                  <textarea id="message" maxlength="5000" data-msg-required="Please enter your message." rows="3" name="message" placeholder="MESSAGE" required="" class="form-control"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12">
+                  <input type="submit" value="SEND MESSAGE" data-loading-text="Loading..." class="button medium gray"/>
+                </div>
+              </div>
+            </form>
+            <div id="contactSuccess" class="alert alert-success hidden"><strong>Success!</strong> Your message has been sent to us.</div>
+            <div id="contactError" class="alert alert-danger hidden"><strong>Error!</strong> There was an error sending your message.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- FOOTER 1-->
+<footer id="footer1" class="page-section text-center pt-100-b-80-cont">
+  <div class="container">
+    <!-- Social Links-->
+    <div class="footer-soc-a"><a href="http://" title="facebbok" target="_blank"><i class="fa fa-facebook"></i></a><a href="http://" title="google plus" target="_blank"><i class="fa fa-google-plus"></i></a><a href="http://" title="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a><a href="http://" title="instagram" target="_blank"><i class="fa fa-instagram"></i></a></div>
+    <!-- Copyright-->
+    <div class="footer-copy"><a href="http://atemporale.it" title="ATEMPORALE DESIGN - ESTRATÉGIAS CRIATIVAS DE COMUNICAÇÃO E DESIGN" target="_blank">Todos os direitos reservados - Créditos: Atemporale Design</a></div>
+  </div>
+</footer>
+<!-- BACK TO TOP-->
+<p id="back-top"><a href="#top" title="Back to Top"><span class="icon icon-arrows-up"></span></a></p>

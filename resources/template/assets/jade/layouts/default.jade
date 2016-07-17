@@ -1,0 +1,60 @@
+include ./mixin.jade
++infofile('default')
+
+doctype html
+html(lang="pt-br")
+    head
+        meta(charset="utf-8")/
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")/
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")/
+        meta(name="google", content="notranslate")/
+        meta(name="author", content="Alessandro Traversi, Carolina Amorim Lourenço")/
+        meta(name="application-name", content="Atemporale Design")/
+
+        //Meta nameTemplate
+        +yield('MetaDescription')
+        +yield('MetaKeywords')
+
+        //Meta name og
+
+        //Meta name verify
+        meta(name="google-site-verification", content="")/
+
+        //Favicon.ico
+        link(rel="shortcut icon", href!="{{ asset('/img/favicon/favicon.ico') }}", type="image/x-icon")/
+        link(rel="apple-touch-icon", sizes="57x57", href!="{{ asset('/img/favicon/apple_touch_icon_57.png') }}")/
+        link(rel="apple-touch-icon", sizes="60x60", href!="{{ asset('/img/favicon/apple_touch_icon_60.png') }}")/
+        link(rel="apple-touch-icon", sizes="72x72", href!="{{ asset('/img/favicon/apple_touch_icon_72.png') }}")/
+        link(rel="apple-touch-icon", sizes="76x76", href!="{{ asset('/img/favicon/apple_touch_icon_76.png') }}")/
+        link(rel="apple-touch-icon", sizes="114x114", href!="{{ asset('/img/favicon/apple_touch_icon_114.png') }}")/
+        link(rel="apple-touch-icon", sizes="120x120", href!="{{ asset('/img/favicon/apple_touch_icon_120.png') }}")/
+        link(rel="apple-touch-icon", sizes="144x144", href!="{{ asset('/img/favicon/apple_touch_icon_144.png') }}")/
+        link(rel="apple-touch-icon", sizes="152x152", href!="{{ asset('/img/favicon/apple_touch_icon_152.png') }}")/
+        link(rel="apple-touch-icon", sizes="180x180", href!="{{ asset('/img/favicon/apple_touch_icon_180.png') }}")/
+        link(rel="icon", type="image/png", href!="{{ asset('/img/favicon/favicon_16.png')}}", sizes= "16x16")/
+        link(rel="icon", type="image/png", href!="{{ asset('/img/favicon/favicon_32.png')}}", sizes= "32x32")/
+        link(rel="icon", type="image/png", href!="{{ asset('/img/favicon/favicon_96.png')}}", sizes= "96x96")/
+        link(rel="icon", type="image/png", href!="{{ asset('/img/favicon/android_chrome_192.png')}}", sizes="192x192")/
+        meta(name="msapplication-square70x70logo", content!="{{ asset('/img/favicon/smalltile.png') }}")/
+        meta(name="msapplication-square150x150logo", content!="{{ asset('/img/favicon/mediumtile.png') }}")/
+        meta(name="msapplication-wide310x150logo", content!="{{ asset('/img/favicon/widetile.png') }}")/
+        meta(name="msapplication-square310x310logo", content!="{{ asset('/img/favicon/largetile.png') }}")/
+
+
+        //Fonts external link
+        link(rel="stylesheet", type='text/css', href="http://fonts.googleapis.com/css?family=Lato:300,400,700%7COpen+Sans:400,300,700")/
+
+        //Page CSS
+        +yield('cssPagina')
+
+    body(itemtype="", itemscope)
+        // dinamic content
+        +yield('content')
+
+
+
+
+
+
+        //Script interni per pagina
+        +yield('jsPagina')

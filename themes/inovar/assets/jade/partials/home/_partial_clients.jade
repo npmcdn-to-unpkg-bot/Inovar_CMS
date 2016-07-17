@@ -1,0 +1,36 @@
+include ./../../layouts/mixin.jade
+.page-section.p-110-cont
+    .container
+        .row
+            .col-md-12
+                .mb-50
+                    h2.section-title
+                        +content('home_client/_content_title.htm')
+        .row
+            .col-md-7
+                .row.client-row.border-bot
+                    .col-xs-6.col-sm-3.text-center
+                        +content('home_client/_content_item1.htm')
+                    .col-xs-6.col-sm-3.text-center
+                        +content('home_client/_content_item2.htm')
+                    .col-xs-6.col-sm-3.text-center
+                        +content('home_client/_content_item3.htm')
+                    .col-xs-6.col-sm-3.text-center
+                        +content('home_client/_content_item4.htm')
+                .row.client-row
+                    .col-xs-6.col-sm-3.text-center
+                        +content('home_client/_content_item5.htm')
+                    .col-xs-6.col-sm-3.text-center
+                        +content('home_client/_content_item6.htm')
+                    .col-xs-6.col-sm-3.text-center
+                        +content('home_client/_content_item7.htm')
+                    .col-xs-6.col-sm-3.text-center
+                        +content('home_client/_content_item8.htm')
+
+            .col-md-5
+                blockquote.quote.mb-0.pl-50-min-1169
+                    p
+                        +content('home_client/_content_comment.htm')
+
+                    footer
+                        +content('home_client/_content_author.htm')

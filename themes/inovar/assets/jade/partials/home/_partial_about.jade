@@ -1,0 +1,28 @@
+include ./../../layouts/mixin.jade
+#about.page-section
+    .container.fes1-cont
+        .row
+            .col-md-4.fes1-img-cont.wow.fadeInUp.mb-20
+                +content('home_about/_content_img.htm')
+            .col-md-8
+                .row
+                    .col-md-12
+                        .fes1-main-title-cont.wow.fadeInDown
+                            .title-fs-60
+                                +content('home_about/_content_title.htm')
+                            .line-3-100
+                .row
+                    .col-md-6.col-sm-6
+                        .fes1-box.wow.fadeIn
+                            +content('home_about/_content_item1.htm')
+                    .col-md-6.col-sm-6
+                        .fes1-box.wow.fadeIn(data-wow-delay='200ms')
+                            +content('home_about/_content_item2.htm')
+                .row
+                    .col-md-6.col-sm-6
+                        .fes1-box.wow.fadeIn(data-wow-delay='400ms')
+                            +content('home_about/_content_item3.htm')
+                    .col-md-6.col-sm-6
+                        .fes1-box.wow.fadeIn(data-wow-delay='600ms')
+                            +content('home_about/_content_item4.htm')
+

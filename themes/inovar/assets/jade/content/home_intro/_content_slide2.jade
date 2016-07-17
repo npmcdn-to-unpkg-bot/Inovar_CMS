@@ -1,0 +1,16 @@
+- var scritta1 = "IMAGINATION"
+- var scritta2 = "WILL TAKE YOU"
+- var scritta3 = "EVERYWHERE"
+
+- var img_bg = "/themes/inovar/assets/images/revo-slider/slide_1_2.jpg"
+- var img_dummy = "/themes/inovar/assets/images/revo-slider/dummy.png"
+- var img_thumb = "/themes/inovar/assets/images/revo-slider/rs-fullscr-thumb2.jpg"
+
+li(data-transition='zoomout', data-slotamount='1', data-masterspeed='1500', data-thumb="#{img_thumb}", data-saveperformance='on', data-title='IMAGINATION')
+    img(src="#{img_dummy}", alt='slidebg2', data-lazyload="#{img_bg}", data-bgposition='center top', data-bgfit='cover', data-bgrepeat='no-repeat')/
+    .tp-caption.rs-parallaxlevel-4.zoomout(data-x='left', data-y='center', data-speed='1300', data-start='200', data-easing='Power3.easeInOut', style='z-index: 0;')
+        .slider-bg-white-cap
+    .rs-parallaxlevel-4.opacity-scroll2
+        .tp-caption.center-0-478.dark-light-61.sfb.tp-resizeme(data-x='645', data-y='255', data-speed='500', data-start='850', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 7; max-width: auto; max-height: auto; white-space: nowrap;') #{scritta1}"
+        .tp-caption.center-0-478.dark-light-54.sfb.tp-resizeme(data-x='650', data-y='330', data-speed='500', data-start='1050', data-easing='Power1.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 8; max-width: auto; max-height: auto; white-space: nowrap;') #{scritta2}"
+        .tp-caption.center-0-478.dark-black-63.sfb.tp-resizeme(data-x='650', data-y='407', data-speed='900', data-start='1500', data-easing='Power3.easeInOut', data-splitin='none', data-splitout='none', data-elementdelay='0.1', data-endelementdelay='0.1', style='z-index: 9; max-width: auto; max-height: auto; white-space: nowrap;') #{scritta3}"

@@ -1,0 +1,14 @@
+include ./../../layouts/mixin.jade
+
+.relative
+    .rs-fullscr-container
+        #rs-fullscr.tp-banner
+            ul
+                +content('home_intro/_content_slide1.htm')
+                +content('home_intro/_content_slide2.htm')
+                +content('home_intro/_content_slide3.htm')
+
+    // SCROLL ICON
+    .local-scroll-cont
+        a.scroll-down.smooth-scroll(href="{{ 'home'|page }}/#about" title="Veja em baixo")
+            .icon.icon-arrows-down

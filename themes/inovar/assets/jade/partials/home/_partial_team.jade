@@ -1,0 +1,14 @@
+include ./../../layouts/mixin.jade
+.page-section.about-us-2-cont.pt-100-cont
+    .container
+        .row
+            .col-md-12
+                .mb-40
+                    h2.section-title
+                        +content('home_team/_content_title.htm')
+        .row
+            .col-md-12.text-center.wow.fadeInUp(data-wow-duration='1s')
+                +content('home_team/_content_img.htm')
+    .port-view-more-cont
+        a.port-view-more-inv(href='about-us.html')
+            +content('home_team/_content_calltoaction.htm')

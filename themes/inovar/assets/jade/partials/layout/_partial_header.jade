@@ -1,0 +1,52 @@
+- var voce_1_link = "{{ 'home'|page }}/#"
+- var voce_1_testo = "HOME"
+
+- var voce_2_link = "{{ 'home'|page }}/#"
+- var voce_2_testo = "VOCE2"
+
+- var voce_3_link = "{{ 'home'|page }}/#"
+- var voce_3_testo = "VOCE3"
+
+- var voce_4_link = "{{ 'home'|page }}/#"
+- var voce_4_testo = "VOCE4"
+
+
+header#nav.header.header-1
+    .header-wrapper
+        .container-m-30.clearfix
+            .logo-row
+                // LOGO
+                .logo-container-2
+                    .logo-2
+                        a.clearfix(href='#{voce_1_link}')
+                            img.logo-img(src="{{ 'assets/images/logo.png'|theme}}", alt='Logo')/
+
+                // BUTTON
+                .menu-btn-respons-container
+                    button.navbar-toggle.btn-navbar.collapsed(type='button', data-toggle='collapse', data-target='#main-menu .navbar-collapse')
+                        span.icon_menu.hamb-mob-icon(aria-hidden='true')
+        // MAIN MENU CONTAINER
+        .main-menu-container
+            .container-m-30.clearfix
+                // MAIN MENU
+                #main-menu
+                    .navbar.navbar-default(role='navigation')
+                        // MAIN MENU LIST
+                        nav.collapse.collapsing.navbar-collapse.right-1024
+                            ul.nav.navbar-nav
+                                li.parent.current
+                                    a(href='#{voce_1_link}')
+                                        .main-menu-title #{voce_1_testo}
+                                li.parent
+                                    a(href='#{voce_2_link}')
+                                        .main-menu-title #{voce_2_testo}
+                                li.parent
+                                    a(href='#{voce_3_link}')
+                                        .main-menu-title #{voce_3_testo}
+                                li.parent
+                                    a(href='#{voce_4_link}')
+                                        .main-menu-title #{voce_4_testo}
+
+
+
+

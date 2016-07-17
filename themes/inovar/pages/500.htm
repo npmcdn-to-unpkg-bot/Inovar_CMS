@@ -1,0 +1,53 @@
+title = "500"
+url = "/500"
+layout = "default"
+description = "Página inicial do site"
+
+
+==
+
+
+{% put styles %}
+
+{% endput %}
+
+
+
+{% put scripts %}
+
+{% endput %}
+
+
+
+{% put pages %}
+
+<div class="container p-140-cont">
+  <div class="row mb-40">
+    <div class="col-md-12 text-center">
+      <div id="clock"></div>
+    </div>
+    <div class="col-md-6 text-center img-container-404"><img alt="img" src="{{'assets/images/content/404.png'|theme}}"/></div>
+    <div class="col-md-6 m-top-10">
+      <h3>OOPS! THE PAGE YOU WERE LOOKING FOR, COULDN&apos;T BE FOUND</h3>
+      <p>We&apos;re sorry, but the page you were looking for doesn&apos;t exist. Here are some useful links</p>
+      <div class="row m-top-20">
+        <div class="col-md-6">
+          <ul class="icon-list">
+            <li><i class="fa fa-angle-right"></i><a href="index.html" class="a-invert">Home</a></li>
+            <li><i class="fa fa-angle-right"></i><a href="about-us.html" class="a-invert">About Us</a></li>
+            <li><i class="fa fa-angle-right"></i><a href="faq.html" class="a-invert">FAQs</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <ul class="icon-list">
+            <li><i class="fa fa-angle-right"></i><a href="portfolio-2-col.html" class="a-invert">Portfolio</a></li>
+            <li><i class="fa fa-angle-right"></i><a href="blog.html" class="a-invert">Blog</a></li>
+            <li><i class="fa fa-angle-right"></i><a href="contact.html" class="a-invert">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endput %}
+

@@ -149,6 +149,12 @@
 /* This only works with JavaScript, 
 if it's not present, don't show loader */
 
+
+.color-inovar{
+	color:#009996 !important;
+}
+
+
 #loader-overflow{
   display:block;
   width: 100%;
@@ -397,7 +403,7 @@ body {
 }
 .affix .cd-header-buttons {
   top: 10px;
-  color:#8b8c8e;
+  color:#009996;
   transition: top .4s ease 0s; 
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
@@ -5809,11 +5815,12 @@ button {
 	background-color:#4b4e53;
 }
 .button.teal {
-	background-color:#1bbc9b;
+	background-color:#0a9992;
 	color:#fff;
 }
 .button.teal:hover {
-	background-color:#4b4e53;
+	background-color:#fff;
+	color:#0a9992;
 }
 .button.gray {
 	color:#fff;
@@ -5841,10 +5848,10 @@ button {
 }
 .button.green {
 	color:#fff;
-	background-color:#259b24;
+	background-color:#0a9992;
 }
 .button.green:hover {
-	background-color:#4b4e53;
+	background-color:#2f0e0f;
 	cursor:pointer;
 }
 .button.lime {
@@ -5855,6 +5862,16 @@ button {
 	background-color:#4b4e53;
 	cursor:pointer;
 }
+
+.button.brown {
+	color:#fff;
+	background-color:#2f0e0f;
+}
+.button.brown:hover {
+	background-color:#0a9992;
+	color:#fff;
+	cursor:pointer;
+
 /****************************************/
 .demo-buttons a{
 	margin-right:6px;

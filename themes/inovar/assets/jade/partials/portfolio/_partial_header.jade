@@ -1,0 +1,11 @@
+include ./../../layouts/mixin.jade
+
+.page-title-cont.page-title-small.grey-light-bg
+    .relative.container.align-left
+        .row
+            .col-md-8
+                h1.page-title
+                    +content('portfolio_header/_content_title.htm')
+            .col-md-4
+                .breadcrumbs
+                    +content('portfolio_header/_content_breadcrumbs.htm')

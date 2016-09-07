@@ -1,0 +1,32 @@
+include ./../../layouts/mixin.jade
+
+#about.page-section.p-110-cont
+    .container
+        .row
+            // TESTIMONIALS
+            .col-md-4.pt-30.pb-40
+                +content('about_row2/_content_skill1.htm')
+                +content('about_row2/_content_skill2.htm')
+                +content('about_row2/_content_skill3.htm')
+
+            // FEATURES
+            .col-md-8.col-lg-7.col-lg-offset-1
+                .row
+                    .col-md-6.col-sm-6.pb-10
+                        .fes5-box.wow.fadeIn
+                            +content('about_row2/_content_item1.htm')
+
+                    .col-md-6.col-sm-6.pb-10
+                        .fes5-box.wow.fadeIn(data-wow-delay='200ms')
+                            +content('about_row2/_content_item2.htm')
+
+                .row
+                    .col-md-6.col-sm-6.pb-10
+                        .fes5-box.wow.fadeIn(data-wow-delay='400ms')
+                            +content('about_row2/_content_item3.htm')
+
+                    .col-md-6.col-sm-6.pb-10
+                        .fes5-box.wow.fadeIn(data-wow-delay='600ms')
+                            +content('about_row2/_content_item4.htm')
+
+

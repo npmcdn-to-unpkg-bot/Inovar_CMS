@@ -1,0 +1,33 @@
+include ./../../layouts/mixin.jade
+
+.page-section.grey-light-bg.clearfix
+    .fes7-img-cont.col-md-5
+        +content('about_row3/_content_img.htm')
+
+    .container
+        .row
+            .col-md-6.col-md-offset-6.fes7-text-cont.p-80-cont
+                h1
+                    span.font-light
+                        +content('about_row3/_content_title.htm')
+
+                p.mb-60
+                    +content('about_row3/_content_desc.htm')
+
+                .row
+                    .col-md-6.col-sm-6
+                        .fes7-box.wow.fadeIn
+                            +content('about_row3/_content_item1.htm')
+
+                    .col-md-6.col-sm-6
+                        .fes7-box.wow.fadeIn(data-wow-delay='200ms')
+                            +content('about_row3/_content_item2.htm')
+
+                .row
+                    .col-md-6.col-sm-6
+                        .fes7-box.wow.fadeIn(data-wow-delay='400ms')
+                            +content('about_row3/_content_item3.htm')
+
+                    .col-md-6.col-sm-6
+                        .fes7-box.wow.fadeIn(data-wow-delay='600ms')
+                            +content('about_row3/_content_item4.htm')

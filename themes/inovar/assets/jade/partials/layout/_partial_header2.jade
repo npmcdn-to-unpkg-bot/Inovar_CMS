@@ -1,0 +1,63 @@
+- var voce_1_link = "{{ 'home'|page }}/#intro"
+- var voce_1_testo = "HOME"
+
+- var voce_2_link = "{{ 'home'|page }}/#about"
+- var voce_2_testo = "ABOUT"
+
+- var voce_3_link = "{{ 'home'|page }}/#service"
+- var voce_3_testo = "SERVICE"
+
+- var voce_4_link = "{{ 'home'|page }}/#projects"
+- var voce_4_testo = "PROJECTS"
+
+- var voce_5_link = "{{ 'home'|page }}/#contact"
+- var voce_5_testo = "CONTACT"
+
+- var voce_6_link = "{{ 'faq'|page }}"
+- var voce_6_testo = "FAQs"
+
+header#nav.header.header-1.no-transparent.mobile-no-transparent
+    .header-wrapper
+        .container-m-30.clearfix
+            .logo-row
+                // LOGO
+                .logo-container-2
+                    .logo-2
+                        a.clearfix(href='#{voce_1_link}')
+                            img.logo-img(src="{{ 'assets/images/logo.png'|theme}}", alt='Logo')/
+
+                // BUTTON
+                .menu-btn-respons-container
+                    button.navbar-toggle.btn-navbar.collapsed(type='button', data-toggle='collapse', data-target='#main-menu .navbar-collapse')
+                        span.icon_menu.hamb-mob-icon(aria-hidden='true')
+        // MAIN MENU CONTAINER
+        .main-menu-container
+            .container-m-30.clearfix
+                // MAIN MENU
+                #main-menu
+                    .navbar.navbar-default(role='navigation')
+                        // MAIN MENU LIST
+                        nav.collapse.collapsing.navbar-collapse.right-1024
+                            ul.nav.navbar-nav
+                                li.parent.current
+                                    a(href='#{voce_1_link}', title="")
+                                        .main-menu-title #{voce_1_testo}
+                                li.parent
+                                    a(href='#{voce_2_link}', title="")
+                                        .main-menu-title #{voce_2_testo}
+                                li.parent
+                                    a(href='#{voce_3_link}', title="")
+                                        .main-menu-title #{voce_3_testo}
+                                li.parent
+                                    a(href='#{voce_4_link}', title="")
+                                        .main-menu-title #{voce_4_testo}
+                                li.parent
+                                    a(href='#{voce_5_link}', title="")
+                                        .main-menu-title #{voce_5_testo}
+                                li.parent(data-link="faq")
+                                    a(href='#{voce_6_link}', title="")
+                                        .main-menu-title #{voce_6_testo}
+
+
+
+

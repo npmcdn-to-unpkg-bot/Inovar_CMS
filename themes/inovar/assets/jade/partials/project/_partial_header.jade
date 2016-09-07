@@ -1,0 +1,14 @@
+include ./../../layouts/mixin.jade
+
+.page-title-cont.page-title-large.grey-dark-bg.page-title-img.blog-single-fullwidth-img(style='background-image: url(/themes/inovar/assets/images/about-me.jpg)')
+    .relative.container.align-left
+        .row
+            .col-md-8
+                h1.page-title
+                    +content('project_header/_content_title.htm')
+                .page-sub-title
+                    +content('project_header/_content_subtitle.htm')
+            .col-md-4
+                .breadcrumbs
+                    +content('project_header/_content_breadcrumbs.htm')
+

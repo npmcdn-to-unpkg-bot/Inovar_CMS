@@ -76,8 +76,18 @@ description = "default"
     -->
     <div id="wrap" class="boxed">
       <div class="grey-bg">
-{% partial "layout/_partial_warning" %}
-{% partial "layout/_partial_header" %}
+{% partial "layout/_partial_warning" %}{% if this.page.title == 'Homepage' %}
+
+
+{% partial "layout/_partial_header" %}{% elseif this.page.title == 'Prog1' %}
+
+
+{% partial "layout/_partial_header" %}{% else %}
+
+
+{% partial "layout/_partial_header2" %}{% endif %}
+
+
 
 {% placeholder pages %}
 

@@ -1,0 +1,14 @@
+include ./../../layouts/mixin.jade
+
+.page-section.nl-cont
+    .container
+        .relative
+            #mc_embed_signup.nl-form-container.clearfix
+                form#mc-embedded-subscribe-form.newsletterform.validate(action='http://abcgomel.us9.list-manage.com/subscribe/post-json?u=ba37086d08bdc9f56f3592af0&id=e38247f7cc&c=?', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+                    // EDIT THIS ACTION URL (add "post-json?u" instead of "post?u" and appended "&amp;c=?" to the end of this URL)
+                    input#mce-EMAIL.email.nl-email-input(type='email', value='', name='EMAIL', placeholder='Enter your email', required='')
+                    // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+                    div(style='position: absolute; left: -5000px;')
+                        input(type='text', name='b_ba37086d08bdc9f56f3592af0_e38247f7cc', tabindex='-1', value='')
+                    input#mc-embedded-subscribe.button.medium.gray(type='submit', value='SUBSCRIBE', name='subscribe')
+                #notification_container

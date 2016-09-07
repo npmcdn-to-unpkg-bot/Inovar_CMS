@@ -85,7 +85,15 @@ html(class="no-js", lang="pt-br", itemscope itemtype="http://schema.org/Creative
         #wrap.boxed
             .grey-bg
                 +partial('layout/_partial_warning')
+
+                +if3('this.page.title','==','Homepage')
                 +partial('layout/_partial_header')
+                +elseif3('this.page.title','==','Prog1')
+                +partial('layout/_partial_header')
+                +else()
+                +partial('layout/_partial_header2')
+                +endif()
+
                 +yield('pages')
                 +partial('layout/_partial_footer')
 

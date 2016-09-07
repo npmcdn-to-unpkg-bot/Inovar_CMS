@@ -1,0 +1,20 @@
+include ./../../layouts/mixin.jade
+
+.page-section.mt-80.mb-0
+    .container
+        h4.blog-page-title.mt-0.mb-40
+            +content('project_related/_content_title.htm')
+
+        ul#items-grid.port-grid.port-grid-gut.clearfix(style='position: relative; height: 564px;')
+
+            li.port-item.mix.development(style='position: absolute; left: 0px; top: 0px;')
+                +content('project_related/_content_item1.htm')
+
+            li.port-item.mix.design(style='position: absolute; left: 287px; top: 0px;')
+                +content('project_related/_content_item2.htm')
+
+            li.port-item.mix.photography(style='position: absolute; left: 575px; top: 0px;')
+                +content('project_related/_content_item3.htm')
+
+            li.port-item.mix.development(style='position: absolute; left: 862px; top: 0px;')
+                +content('project_related/_content_item4.htm')

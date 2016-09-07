@@ -1,0 +1,13 @@
+include ./../../layouts/mixin.jade
+
+.container
+    .row
+        .col-md-4
+            .port-detail-cont.mb-30
+                h4.blog-page-title.mt-0.mb-20
+                    +content('project_details/_content_title.htm')
+                .port-detail
+                    +content('project_details/_content_list.htm')
+
+        .col-md-8.mb-80
+            +content('project_details/_content_desc.htm')

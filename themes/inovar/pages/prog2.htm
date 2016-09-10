@@ -1,9 +1,8 @@
-title = "portfolio"
-url = "/portfolio"
+title = "Prog2"
+url = "/prog2"
 layout = "default"
 description = "Página inicial do site"
-
-
+is_hidden = 0
 
 [simpleContact]
 nameTitle = "Nome completo"
@@ -13,11 +12,7 @@ subjectTitle = "Objeto"
 messageTitle = "Mensagem"
 buttonText = "Enviar"
 displayPhone = 1
-
-
 ==
-
-
 {% put styles %}
 
 {% endput %}
@@ -36,10 +31,13 @@ displayPhone = 1
 
 {% put pages %}
 
-{% partial "portfolio/_partial_header" %}
+{% partial "project/_partial_header2" %}
 <div class="p-140-cont">
-{% partial "portfolio/_partial_item1" %}
-</div>
-{% partial "portfolio/_partial_newsletter" %}
-{% endput %}
+{% partial "project/_partial_details2" %}
+{% partial "project/_partial_gallery2" %}
+  <hr class="mt-0 mb-0"/>
+{% partial "project/_partial_pagination2" %}
+{% partial "project/_partial_testimony2" %}
 
+</div>
+{% endput %}
